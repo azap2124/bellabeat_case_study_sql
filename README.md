@@ -1,4 +1,4 @@
-# Case Study: Bellabeat Fitness Data Analysis 
+# ![bellabeat_logo] Case Study: Bellabeat Fitness Data Analysis 
 #### Author: Angel Zapata 
 #### Date: March 20, 2023
 #
