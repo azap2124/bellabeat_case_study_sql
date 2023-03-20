@@ -25,8 +25,32 @@ Urška Sršen: Co-founder and Chief Creative Officer of Bellabeat
 Sando Mur: Mathematician and Bellabeat’s cofounder; a key member of the Bellabeat executive team
 
 ## 1. Ask
+### Identifying the business task:
+
+I will analyze smart device usage data in order to gain insights into how consumers use non-Bellabeat smart devices. After this is accomplished, I'll select one Bellabeat product and apply these insights to my presentation.
+
+### Questions to consider:
+1. What are some trends in smart device usage?
+2. How could these trends apply to Bellabeat customers?
+3. How could these trends help influence Bellabeat marketing strategy?
+
+**Primary stakeholders:** Urška Sršen and Sando Mur - Executive team members
+
+**Secondary stakeholders:** Bellabeat's marketing analytics team
+
+
 ## 2. Prepare
+
+
 ## 3. Process
+
+
 ## 4. Analyze
+
+
 ## 5. Share
+
+
 ## 6. Act
+
+
