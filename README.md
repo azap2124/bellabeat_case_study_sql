@@ -1,14 +1,14 @@
-# ![bellabeat_logo] Case Study: Bellabeat Fitness Data Analysis 
+# ![bellabeat_logo](https://user-images.githubusercontent.com/126125206/226458896-65662259-b843-4722-92a4-f15bf8ffbbc6.png) Case Study: Bellabeat Fitness Data Analysis 
 #### Author: Angel Zapata 
 #### Date: March 20, 2023
 #
-For this case study I followed the six step data analysis process:
-* Ask
-* Prepare
-* Process
-* Analyze
-* Share
-* Act
+**For this case study I followed the six step data analysis process:**
+* [Ask](#1-ask)
+* [Prepare](#2-prepare) 
+* [Process](#3-process)
+* [Analyze](#4-analyze)
+* [Share](#5-share)
+* [Act](#6-act)
 
 ## Introduction
 Bellabeat is a high-tech manufacturer of health-focused products for women. For this study, I was asked to help their marketing team get insights in order to make informed decisions for the future of their products and marketing strategy. Bellabeat was founded in 2013 and has grown very rapidly. It was quickly positioned as a tech-driven wellness company for women. They have five major products: Bellabeat App, Leaf Wellness Tracker, Time Watch, Spring Water Bottle, and their Bellabeat Membership. 
@@ -23,3 +23,10 @@ Urška Sršen and Sando Murhave have asked the marketing analytics team to focus
 Urška Sršen: Co-founder and Chief Creative Officer of Bellabeat  
 
 Sando Mur: Mathematician and Bellabeat’s cofounder; a key member of the Bellabeat executive team
+
+## 1. Ask
+## 2. Prepare
+## 3. Process
+## 4. Analyze
+## 5. Share
+## 6. Act
