@@ -1,1 +1,1 @@
-# bellabeat_case_study
+# Case Study: Bellabeat Fitness Data Analysis 
