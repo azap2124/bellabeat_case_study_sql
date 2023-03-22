@@ -48,6 +48,9 @@ This dataset includes thirty participants. Thirty Fitbit users willingly provide
 #### ROCCC Approach
 * Reliability: **FAIL**. A sample size of at least 30 is often considered the minimum acceptable size for statistical analysis. However, considering there's over 31 million active users for Fitbit, this dataset is not really realiable. Also, all of this data was collected in just one month, which is not long enough to find accurate and reliable trends. It's good, however, that the 30 minimum sample size rule is met.
 * Originality: **FAIL**. The data set was not original and was created through an Amazon Mechanical Turk survey, which is not an ideal approach as it would have been preferable for Fitbit to provide the information directly.
+* Comprehensive: **FAIL**. In my opinion, this data is missing very important elements to make the analysis more complete. Some information that would be helpful to know is age, height, weight, or sex. We also don't the rules as to how this sample was selected. There is no way to know if the people who were chosen were chosen because of bias or if they were chosen at random. 
+* Current: **FAIL**. The data collected is outdated, as it was gathered six years ago, and may not provide an accurate representation of the current situation.
+* Cited: **UNKNOWN**
 
 ## 3. Process
 
