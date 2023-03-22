@@ -40,7 +40,14 @@ I will analyze smart device usage data in order to gain insights into how consum
 
 
 ## 2. Prepare
+For this next step, I will use Google's ROCCC methodology in order to figure out if there are any problems with the data and if it has any problems with bias or credibility. I used this [database](https://www.kaggle.com/arashnic/fitbit) for my analysis. 
 
+#### Data Source
+This dataset includes thirty participants. Thirty Fitbit users willingly provided their consent for the collection of personal tracker data, which included minute-level output for physical activity, heart rate, and sleep monitoring. The dataset has 18 CSV documents each containing different data insights. 
+
+#### ROCCC Approach
+* Reliability: **FAIL**. A sample size of at least 30 is often considered the minimum acceptable size for statistical analysis. However, considering there's over 31 million active users for Fitbit, this dataset is not really realiable. Also, all of this data was collected in just one month, which is not long enough to find accurate and reliable trends. It's good, however, that the 30 minimum sample size rule is met.
+* Originality: **FAIL**. The data set was not original and was created through an Amazon Mechanical Turk survey, which is not an ideal approach as it would have been preferable for Fitbit to provide the information directly.
 
 ## 3. Process
 
