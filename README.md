@@ -53,6 +53,23 @@ This dataset includes thirty participants. Thirty Fitbit users willingly provide
 * Cited: **HIGH**. Data collector and source is well documented. 
 
 ## 3. Process
+#### Data Selection 
+Once I had downloaded the Fitbit dataset and performed file extraction, and after inspecting each file, I proceeded to choose the files that were relevant for my analysis and renamed them using suitable file naming conventions:
+* daily_activity
+* daily_sleep
+* hourly_steps
+* hourly_intensity
+* hourly_calories
+* heart_rate
+* weight_log
+
+#### Cleaning The Data
+I chose Excel for data cleaning. The following steps were taken within each dataset:
+1. Used the Remove Duplicates tool to get rid of duplicate values. 
+2. Formatted the column names to snake case style for consistency throughout my analysis. 
+3. Formatted all date data into MM/DD/YY date format
+4. I converted all numerical data into the Number format, with a maximum of two decimal places.
+5. Created a new file, named daily_activity_weekday, where I added an Activity column to the daily_activity dataset and included the corresponding day names to the date column. This modification aimed to facilitate the analysis of weekdays and weekends based on this column.
 
 
 ## 4. Analyze
