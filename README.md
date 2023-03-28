@@ -71,6 +71,10 @@ I chose Excel for data cleaning. The following steps were taken within each data
 4. I converted all numerical data into the Number format, with a maximum of two decimal places.
 5. Created a new file, named daily_activity_weekday.csv, where I added an Activity column to the daily_activity.csv dataset and included the corresponding day names to the date column. This modification aimed to facilitate the analysis of weekdays and weekends based on this column.
 
+```
+Select (Distinct)
+```
+
 
 ## 4. Analyze
 
