@@ -71,8 +71,36 @@ I chose Excel for data cleaning. The following steps were taken within each data
 4. I converted all numerical data into the Number format, with a maximum of two decimal places.
 5. Created a new file, named daily_activity_weekday.csv, where I added an Activity column to the daily_activity.csv dataset and included the corresponding day names to the date column. This modification aimed to facilitate the analysis of weekdays and weekends based on this column.
 
+#### Data Integrity
+The data that was chosen has been uploaded onto SQL Server Management Studio for the purpose of my analysis. Queries were executed in order to examine the quantity of unique Ids present within each respective table.The following code was ran: 
 ```
-Select (Distinct)
+--- Checking for total users for daily_activity
+SELECT COUNT (DISTINCT id) as daily_activity_total_users
+FROM bellabeat.dbo.daily_activity
+
+--- Checking for total users for daily_sleep
+SELECT COUNT (DISTINCT id) as daily_sleep_total_users
+FROM bellabeat.dbo.daily_sleep
+
+--- Checking for total users for heart_rate
+SELECT COUNT (DISTINCT id) as heart_rate_total_users
+FROM bellabeat.dbo.heart_rate
+
+--- Checking for total users for hourly_calories
+SELECT COUNT (DISTINCT id) as hourly_calories_total_users
+FROM bellabeat.dbo.hourly_calories
+
+--- Checking for total users for hourly_intensities 
+SELECT COUNT (DISTINCT id) as hourly_intensities_total_users
+FROM bellabeat.dbo.hourly_intensities
+
+--- Checking for total users for hourly_steps
+SELECT COUNT (DISTINCT id) as hourly_steps_total_users
+FROM bellabeat.dbo.hourly_steps
+
+--- Checking for total users for weight_log
+SELECT COUNT (DISTINCT id) as weight_log_total_users
+FROM bellabeat.dbo.weight_log
 ```
 
 
