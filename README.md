@@ -126,11 +126,12 @@ COUNT (id) AS total_logged,
 FROM bellabeat.dbo.daily_activity
 GROUP BY id
 ```
-This tells us that there's 29 Active Users that used their devices between 25 and 31 days of the month.  
-Three Moderate Users that used their device between 15 and 24 days.  
-Lastly, there was one Light User that used their device between 0 and 14 days.  
+Active Users — wore their tracker for 25–31 days
+Moderate Users — wore their tracker for 15–24 days
+Light Users — wore their tracker for 0 to 14 days
 
-
+<p align = "center">
+	<img src="https://user-images.githubusercontent.com/126125206/228372574-b566038b-3580-495f-b4c3-52d94373d4c6.png" width="500" height="300"/>
 
 
 
