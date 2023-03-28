@@ -126,9 +126,9 @@ COUNT (id) AS total_logged,
 FROM bellabeat.dbo.daily_activity
 GROUP BY id
 ```
-Active Users — wore their tracker for 25–31 days
-Moderate Users — wore their tracker for 15–24 days
-Light Users — wore their tracker for 0 to 14 days
+* Active Users — wore their tracker for 25–31 days
+* Moderate Users — wore their tracker for 15–24 days
+* Light Users — wore their tracker for 0 to 14 days
 
 <p align = "center">
 	<img src="https://user-images.githubusercontent.com/126125206/228372574-b566038b-3580-495f-b4c3-52d94373d4c6.png" width="500" height="300"/>
