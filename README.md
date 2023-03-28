@@ -113,6 +113,27 @@ Users tracking activity:
 - hourly_steps: 33
 - weight_log: 8
 
+#### Insights
+I was interested in finding out how often each user utilized their FitBit devices in the daily_activity dataset. To do this, I ran the following code: 
+```
+SELECT id,
+COUNT (id) AS total_logged,
+	CASE
+	WHEN COUNT(id) BETWEEN 25 AND 31 THEN 'Active User'
+	WHEN COUNT(id) BETWEEN 15 and 24 THEN 'Moderate User'
+	WHEN COUNT(id) BETWEEN 0 and 14 THEN 'Light User'
+	END user_type
+FROM bellabeat.dbo.daily_activity
+GROUP BY id
+```
+This tells us that there's 29 Active Users that used their devices between 25 and 31 days of the month.  
+Three Moderate Users that used their device between 15 and 24 days.  
+Lastly, there was one Light User that used their device between 0 and 14 days.  
+
+
+
+
+
 ## 4. Analyze
 
 
