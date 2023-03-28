@@ -102,7 +102,16 @@ FROM bellabeat.dbo.hourly_steps
 SELECT COUNT (DISTINCT id) as weight_log_total_users
 FROM bellabeat.dbo.weight_log
 ```
+Unfortunately, the heart_rate and weight_log datasets do not include enough data to move forward with analysis (7 and 8 users tracking activity, respectively). I decided to move forward without them.  
 
+Users tracking activity: 
+- daily_activity: 33
+- daily_sleep: 24
+- heart_rate: 7 
+- hourly_calories: 33
+- hourly_intensities: 33
+- hourly_steps: 33
+- weight_log: 8
 
 ## 4. Analyze
 
