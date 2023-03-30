@@ -69,7 +69,6 @@ I chose Excel for data cleaning. The following steps were taken within each data
 2. Formatted the column names to snake case style for consistency throughout my analysis. 
 3. Formatted all date data into MM/DD/YY date format.
 4. I converted all numerical data into the Number format, with a maximum of two decimal places.
-5. Created a new file, named daily_activity_weekday.csv, where I added an Activity column to the daily_activity.csv dataset and included the corresponding day names to the date column. This modification aimed to facilitate the analysis of weekdays and weekends based on this column.
 
 #### Data Integrity
 The data that was chosen has been uploaded onto SQL Server Management Studio for the purpose of my analysis. Queries were executed in order to examine the quantity of unique Ids present within each respective table.The following code was ran: 
@@ -133,7 +132,20 @@ GROUP BY id
 <p align = "center">
 	<img src="https://user-images.githubusercontent.com/126125206/228372574-b566038b-3580-495f-b4c3-52d94373d4c6.png" width="500" height="300"/>
 
-
+Next, I wrote a query aimed at determining the average duration of user engagement in each level of activity. This was taken from the daily_activity dataset.
+```
+--- Average activity per user
+SELECT
+ROUND(AVG(very_active_minutes),1) AS average_very_active,
+ROUND(AVG(fairly_active_minutes),1) AS average_fairly_active,
+ROUND(AVG(lightly_active_minutes),1) AS average_lightly_active,
+ROUND(AVG(sedentary_minutes),1) AS average_sedentary
+FROM bellabeat.dbo.daily_activity
+````
+The users spent the highest average number of minutes in the **Sedentary Activity level.**
+	
+<p align = "center">
+	<img src="https://user-images.githubusercontent.com/126125206/228710884-5a810cd6-dbb4-4036-b894-ee9eba5b078a.png" width="500" height="300"/>
 
 ## 4. Analyze
 
