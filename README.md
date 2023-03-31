@@ -40,7 +40,7 @@ I will analyze smart device usage data in order to gain insights into how consum
 
 
 ## 2. Prepare
-For this next step, I will use Google's ROCCC methodology in order to figure out if there are any problems with the data and if it has any problems with bias or credibility. I used this [database](https://www.kaggle.com/arashnic/fitbit) for my analysis. 
+For this next step, I will use Google's ROCCC methodology in order to figure out if there are any problems with the data and if it has any problems with bias or credibility. I utilized this [database](https://www.kaggle.com/arashnic/fitbit) for my analysis. 
 
 #### Data Source
 This dataset includes thirty participants. Thirty Fitbit users willingly provided their consent for the collection of personal tracker data, which included minute-level output for physical activity, heart rate, and sleep monitoring. The dataset has 18 CSV documents each containing different data insights. 
@@ -112,15 +112,17 @@ Users tracking activity:
 - hourly_steps: 33
 - weight_log: 8
 
-#### Insights
+## 4. Analyze
+
+#### User Insights
 I was interested in finding out how often each user utilized their FitBit devices in the daily_activity dataset. To do this, I ran the following code: 
 ```
 SELECT id,
 COUNT (id) AS total_logged,
 	CASE
 	WHEN COUNT(id) BETWEEN 25 AND 31 THEN 'Active User'
-	WHEN COUNT(id) BETWEEN 15 and 24 THEN 'Moderate User'
-	WHEN COUNT(id) BETWEEN 0 and 14 THEN 'Light User'
+	WHEN COUNT(id) BETWEEN 15 AND 24 THEN 'Moderate User'
+	WHEN COUNT(id) BETWEEN 0 AND 14 THEN 'Light User'
 	END user_type
 FROM bellabeat.dbo.daily_activity
 GROUP BY id
@@ -142,12 +144,43 @@ ROUND(AVG(lightly_active_minutes),1) AS average_lightly_active,
 ROUND(AVG(sedentary_minutes),1) AS average_sedentary
 FROM bellabeat.dbo.daily_activity
 ````
-The users spent the highest average number of minutes in the **Sedentary Activity level.**
+As anticipated, users on average spent the most number of minutes in the Sedentary Activity level. Given that physically demanding jobs are an exception, it was expected that users would spend the majority of their activity in this level.
 	
 <p align = "center">
 	<img src="https://user-images.githubusercontent.com/126125206/228710884-5a810cd6-dbb4-4036-b894-ee9eba5b078a.png" width="500" height="300"/>
+	
+However, these insights led to another question - which of the users are meeting the minimum activity levels recommended by the [CDC](https://www.cdc.gov/physicalactivity/basics/adults/index.htm#:~:text=Each%20week%20adults%20need%20150,Physical%20Activity%20Guidelines%20for%20Americans.&text=We%20know%20150%20minutes%20of,do%20it%20all%20at%20once)?  
+The Centers for Disease Control and Prevention recommends 150 minutes of moderate-intensity physical activity. At first glance of the data, it seems unlikely that this requirement will be met. I wrote the following query to add Very Active and Fairly Active activities. 
+```
+SELECT
+AVG(very_active_minutes) + AVG(fairly_active_minutes) AS total_active_minutes
+FROM bellabeat.dbo.daily_activity
+```
+The result came out to be an average of 35 minutes. However, I observed that a considerable number of users recorded 0 minutes in both the Very Active and Fairly Active categories. I have a hypothesis that they didn't use the FitBit device on that particular day, hence I opted to exclude any outcomes that showed a zero value. I decided to run the following query to get results by user: 
+```
+SELECT id,
+ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) AS total_active_minutes
+FROM bellabeat.dbo.daily_activity
+WHERE very_active_minutes <> 0 AND fairly_active_minutes <> 0
+GROUP BY id
+``` 
+Upon my investigation, I found that all users were failing to meet the guidelines set by the CDC. 
 
-## 4. Analyze
+```
+SELECT id,
+ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) AS total_active_minutes,
+CASE
+	WHEN ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) BETWEEN 0 AND 50 THEN 'Low Activity' 
+	WHEN ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) BETWEEN 51 AND 100 THEN 'Medium Activity' 
+	WHEN ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) BETWEEN 101 AND 150 THEN 'High Activity' 
+END activity_level
+FROM bellabeat.dbo.daily_activity
+WHERE very_active_minutes <> 0 AND fairly_active_minutes <> 0
+GROUP BY id
+```
+
+
+ 
 
 
 ## 5. Share
