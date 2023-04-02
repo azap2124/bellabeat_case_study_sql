@@ -117,6 +117,7 @@ Users tracking activity:
 #### User Insights
 I was interested in finding out how often each user utilized their FitBit devices in the daily_activity dataset. To do this, I ran the following code: 
 ```
+--- Categorizing users by how much they used their FitBit devices
 SELECT id,
 COUNT (id) AS total_logged,
 	CASE
@@ -152,12 +153,14 @@ As anticipated, users on average spent the most number of minutes in the Sedenta
 However, these insights led to another question - which of the users are meeting the minimum activity levels recommended by the [CDC](https://www.cdc.gov/physicalactivity/basics/adults/index.htm#:~:text=Each%20week%20adults%20need%20150,Physical%20Activity%20Guidelines%20for%20Americans.&text=We%20know%20150%20minutes%20of,do%20it%20all%20at%20once)?  
 The Centers for Disease Control and Prevention recommends 150 minutes of moderate-intensity physical activity. At first glance of the data, it seems unlikely that this requirement will be met. I wrote the following query to add Very Active and Fairly Active activities. 
 ```
+--- Sum of the averages of very active and fairly active activities
 SELECT
 AVG(very_active_minutes) + AVG(fairly_active_minutes) AS total_active_minutes
 FROM bellabeat.dbo.daily_activity
 ```
 The result came out to be an average of 35 minutes. However, I observed that a considerable number of users recorded 0 minutes in both the Very Active and Fairly Active categories. I have a hypothesis that they didn't use the FitBit device on that particular day, hence I opted to exclude any outcomes that showed a zero value. I decided to run the following query to get results by user: 
 ```
+--- Sum of the averages of very active and fairly active activities excluding 0 minute entries
 SELECT id,
 ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) AS total_active_minutes
 FROM bellabeat.dbo.daily_activity
@@ -167,6 +170,7 @@ GROUP BY id
 Upon my investigation, I found that all users were failing to meet the guidelines set by the CDC. 
 
 ```
+--- Categorizing users by their activity levels 
 SELECT id,
 ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) AS total_active_minutes,
 	CASE
@@ -188,6 +192,7 @@ As you can see, only two users were in the High Activity category which is very 
 	
 Next, I wanted to take a sample from a week's worth of data to see how it compared to the whole dataset. I looked at the dates from May 1st to May 7th, 2016.
 ```
+--- Categorizing users by whether they met CDC recommendations 
 SELECT id, 
 SUM(very_active_minutes) + SUM(fairly_active_minutes) AS total_active_minutes,
 	CASE 
