@@ -178,9 +178,32 @@ FROM bellabeat.dbo.daily_activity
 WHERE very_active_minutes <> 0 AND fairly_active_minutes <> 0
 GROUP BY id
 ```
+<p align = "center">
+	<img src="https://user-images.githubusercontent.com/126125206/229371423-eb8e668e-5d13-44b2-a703-9f94b38a9542.png" width="500" height="300"/>
 
+The category "Low Activity" pertains to individuals who engaged in fairly active and very active activities for a duration of 0 to 50 minutes.
+On the other hand, "Medium Activity" pertains to individuals who spent 51 to 100 minutes on fairly active and very active activities.
+Lastly, the category "High Activity" includes individuals who spent 101 to 150 minutes engaging in fairly active and very active activities. 
+As you can see, only two users were in the High Activity category which is very low.  
+	
+Next, I wanted to take a sample from a week's worth of data to see how it compared to the whole dataset. I looked at the dates from May 1st to May 7th, 2016.
+```
+SELECT id, 
+SUM(very_active_minutes) + SUM(fairly_active_minutes) AS total_active_minutes,
+	CASE 
+	WHEN SUM(very_active_minutes) + SUM(fairly_active_minutes) >= 150 THEN 'Meets CDC Recommendation'
+	WHEN SUM(very_active_minutes) + SUM(fairly_active_minutes) < 150 THEN 'Does Not Meet CDC Recommendation'
+	END CDC_recommendations
+FROM bellabeat. dbo. daily_activity
+WHERE activity_date BETWEEN '5/1/2016' AND '5/7/2016'
+GROUP BY id
+```
+<p align = "center">
+	<img src="https://user-images.githubusercontent.com/126125206/229373615-0c7f81cc-e741-4dbd-803f-2bdf6a018c8b.png" width="500" height="300"/>	
 
- 
+The results came out as follow: 
+- Users who do not meet the CDC recommendations: 9 
+- Users who meet CDC recommendations: 21
 
 
 ## 5. Share
@@ -189,3 +212,4 @@ GROUP BY id
 ## 6. Act
 
 
+  
