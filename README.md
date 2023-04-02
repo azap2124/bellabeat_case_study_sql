@@ -133,7 +133,7 @@ GROUP BY id
 * Light Users — wore their tracker for 0 to 14 days
 
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/228372574-b566038b-3580-495f-b4c3-52d94373d4c6.png" width="500" height="300"/>
+	<img src="https://user-images.githubusercontent.com/126125206/229374829-6de27082-7ebb-45ee-9ad3-129f153b3ba1.png" width="500" height="300"/>
 
 Next, I wrote a query aimed at determining the average duration of user engagement in each level of activity. This was taken from the daily_activity dataset.
 ```
@@ -148,7 +148,7 @@ FROM bellabeat.dbo.daily_activity
 As anticipated, users on average spent the most number of minutes in the Sedentary Activity level. Given that physically demanding jobs are an exception, it was expected that users would spend the majority of their activity in this level.
 	
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/228710884-5a810cd6-dbb4-4036-b894-ee9eba5b078a.png" width="500" height="300"/>
+	<img src="https://user-images.githubusercontent.com/126125206/229374954-7c675b4b-9467-4bc1-b335-c23ff55a7ae8.png" width="500" height="300"/>
 	
 However, these insights led to another question - which of the users are meeting the minimum activity levels recommended by the [CDC](https://www.cdc.gov/physicalactivity/basics/adults/index.htm#:~:text=Each%20week%20adults%20need%20150,Physical%20Activity%20Guidelines%20for%20Americans.&text=We%20know%20150%20minutes%20of,do%20it%20all%20at%20once)?  
 The Centers for Disease Control and Prevention recommends 150 minutes of moderate-intensity physical activity. At first glance of the data, it seems unlikely that this requirement will be met. I wrote the following query to add Very Active and Fairly Active activities. 
