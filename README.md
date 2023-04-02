@@ -169,11 +169,11 @@ Upon my investigation, I found that all users were failing to meet the guideline
 ```
 SELECT id,
 ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) AS total_active_minutes,
-CASE
+	CASE
 	WHEN ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) BETWEEN 0 AND 50 THEN 'Low Activity' 
 	WHEN ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) BETWEEN 51 AND 100 THEN 'Medium Activity' 
 	WHEN ROUND(AVG(very_active_minutes),2) + ROUND(AVG(fairly_active_minutes),2) BETWEEN 101 AND 150 THEN 'High Activity' 
-END activity_level
+	END activity_level
 FROM bellabeat.dbo.daily_activity
 WHERE very_active_minutes <> 0 AND fairly_active_minutes <> 0
 GROUP BY id
