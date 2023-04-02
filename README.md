@@ -192,7 +192,7 @@ As you can see, only two users were in the High Activity category which is very 
 	
 Next, I wanted to take a sample from a week's worth of data to see how it compared to the whole dataset. I looked at the dates from May 1st to May 7th, 2016.
 ```
---- Categorizing users by whether they met CDC recommendations 
+--- Categorizing users by whether or not they met CDC recommendations 
 SELECT id, 
 SUM(very_active_minutes) + SUM(fairly_active_minutes) AS total_active_minutes,
 	CASE 
