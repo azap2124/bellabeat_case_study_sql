@@ -2,6 +2,7 @@
 #### Author: Angel Zapata 
 #### Date: March 20, 2023
 #
+
 **For this case study I followed the six step data analysis process:**
 * [Ask](#1-ask)
 * [Prepare](#2-prepare) 
@@ -9,6 +10,10 @@
 * [Analyze](#4-analyze)
 * [Share](#5-share)
 * [Act](#6-act)
+
+Tools used: 
+* Microsoft Excel
+* SQL Server Management Studio 
 
 ## Introduction
 Bellabeat is a high-tech manufacturer of health-focused products for women. For this study, I was asked to help their marketing team get insights in order to make informed decisions for the future of their products and marketing strategy. Bellabeat was founded in 2013 and has grown very rapidly. It was quickly positioned as a tech-driven wellness company for women. They have five major products: Bellabeat App, Leaf Wellness Tracker, Time Watch, Spring Water Bottle, and their Bellabeat Membership. 
@@ -210,7 +215,15 @@ The results came out as follow:
 - Users who do not meet the CDC recommendations: 9 
 - Users who meet CDC recommendations: 21
 
-
+#### Total Steps by Users	
+The Mayo Clinic, a non-profit organization dedicated to clinical practice, education, and research, published [**this article**](https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/10000-steps/art-20317391#:~:text=The%20average%20American%20walks%203%2C000,a%20day%20every%20two%20weeks.) suggesting that individuals should aim to take 10,000 steps per day. I was interested in finding out which users were achieving the recommended daily goal of taking 10,000 steps per day.
+	
+According the the article, the average person walks walks 3,000 to 4,000 steps a day. To classify the users even further, I created the following groupings: 
+* Passive users: 0 - 3,500 steps 
+* Average users: 3,501 - 7,500 steps 
+* Very active: 7,500+ steps 
+	
+	
 ## 5. Share
 
 
