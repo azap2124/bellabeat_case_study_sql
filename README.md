@@ -215,22 +215,40 @@ The results came out as follow:
 - Users who do not meet the CDC recommendations: 9 
 - Users who meet CDC recommendations: 21
 
-#### Total Steps by Users	
+#### Average Steps by Users	
 The Mayo Clinic, a non-profit organization dedicated to clinical practice, education, and research, published [**this article**](https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/10000-steps/art-20317391#:~:text=The%20average%20American%20walks%203%2C000,a%20day%20every%20two%20weeks.) suggesting that individuals should aim to take 10,000 steps per day. I was interested in finding out which users were achieving the recommended daily goal of taking 10,000 steps per day.
 	
 According the the article, the average person walks walks 3,000 to 4,000 steps a day. To classify the users even further, I created the following groupings: 
 * Passive users: 0 - 4,500 steps 
 * Average users: 5,501 - 9,500 steps 
 * Very active: 9,500+ steps 
+Here's my code: 
+```
+--- Average steps per user
+SELECT id,
+AVG(total_steps) AS average_steps,
+CASE
+	WHEN ROUND(AVG(total_steps),0) < 4500 THEN 'Passive user'
+	WHEN ROUND(AVG(total_steps),0) BETWEEN 4501 AND 9999 THEN 'Average user'
+	WHEN ROUND(AVG(total_steps),0) > 10000 THEN 'Very active user'
+END user_type
+FROM bellabeat.dbo.daily_activity
+GROUP BY id
+```
 
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/230230809-17081a04-b448-449d-b3f2-f47a26423182.png" width="500" height="300"/>  
+	<img src="https://user-images.githubusercontent.com/126125206/230232543-4580f7e8-c3ac-40d0-9cc0-756d85bea66c.png" width="500" height="300"/>  
 
 Here are my results: 
 * Passive users: 6
-* Average users: 18
-* Very active: 9
+* Average users: 20
+* Very active: 7  
 
+Out of all the users, 79% didn't meet the goal of 10,000 steps per day. Of these users, 61% were moderately active, while 18% were not very active.
+
+#### Total Steps by the Hour
+Next, my goal was to examine the user's total steps by the hour in order to determine the peak hours of activity for our users. Here's my code: 
+```
 	
 ## 5. Share
 
