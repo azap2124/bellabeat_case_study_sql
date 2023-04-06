@@ -297,7 +297,7 @@ The objective of the business task was to analyze data on the usage of non-Bella
 
 #### Trends Identified
 * Some of the participants didn't keep up with logging or tracking their data regularly, and only a small number of them recorded their sleep or weight measurements. Out of all the participants, only 24 users logged their sleep data, and only eight users logged their weight data, with just two of them accounting for most of the inputs.
-* In the month of recorded activity, participants spent 79% of their time engaging in sedentary activities.  
+* In the month of recorded activity, participants spent 79% on average engaging in sedentary activities.  
 
 
 
