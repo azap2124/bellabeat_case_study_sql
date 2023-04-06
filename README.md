@@ -140,7 +140,7 @@ WHERE total_logged = '31'
 * Moderate Users - wore their trackers for 15–24 days
 * Light Users - wore their trackers for 0 to 14 days 
  
-(21 users strictly wore their devices for the 31 days)
+**(Only 21 users strictly wore their devices for the 31 days)**
 
 <p align = "center">
 	<img src="https://user-images.githubusercontent.com/126125206/229374829-6de27082-7ebb-45ee-9ad3-129f153b3ba1.png" width="500" height="300"/>
