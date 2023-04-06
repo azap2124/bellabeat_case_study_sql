@@ -61,9 +61,7 @@ This dataset includes thirty participants. Thirty Fitbit users willingly provide
 #### Data Selection 
 Once I had downloaded the Fitbit dataset and performed file extraction, and after inspecting each file, I proceeded to choose the files that were relevant for my analysis and renamed them using suitable file naming conventions:
 * daily_activity.csv
-* daily_sleep.csv
 * hourly_steps.csv
-* hourly_intensity.csv
 * hourly_calories.csv
 * heart_rate.csv
 * weight_log.csv
@@ -82,10 +80,6 @@ The data that was chosen has been uploaded onto SQL Server Management Studio for
 SELECT COUNT (DISTINCT id) as daily_activity_total_users
 FROM bellabeat.dbo.daily_activity
 
---- Checking for total users for daily_sleep
-SELECT COUNT (DISTINCT id) as daily_sleep_total_users
-FROM bellabeat.dbo.daily_sleep
-
 --- Checking for total users for heart_rate
 SELECT COUNT (DISTINCT id) as heart_rate_total_users
 FROM bellabeat.dbo.heart_rate
@@ -93,10 +87,6 @@ FROM bellabeat.dbo.heart_rate
 --- Checking for total users for hourly_calories
 SELECT COUNT (DISTINCT id) as hourly_calories_total_users
 FROM bellabeat.dbo.hourly_calories
-
---- Checking for total users for hourly_intensities 
-SELECT COUNT (DISTINCT id) as hourly_intensities_total_users
-FROM bellabeat.dbo.hourly_intensities
 
 --- Checking for total users for hourly_steps
 SELECT COUNT (DISTINCT id) as hourly_steps_total_users
