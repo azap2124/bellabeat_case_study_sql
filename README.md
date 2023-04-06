@@ -315,7 +315,7 @@ Results are as follows: 13 users on average were not getting enough daily sleep.
 The objective of the business task was to analyze data on the usage of non-Bellabeat products, in order to gain valuable insights into consumer trends in the smart device industry. These insights would then be applied to Bellabeat's customers and future marketing strategies, optimizing revenues and growth for the company while leveraging Bellabeat's growing user base in the smart device and tech-wellness sector. This will involve implementing the findings in the Bellabeat App and upcoming products.
 
 #### Trends Identified
-* Some of the participants didn't keep up with logging or tracking their data regularly, and only a small number of them recorded their sleep or weight measurements. Out of all the participants, only 24 users logged their sleep data, and only 8 users logged their weight data, with just two of them accounting for most of the inputs.
+* Some of the participants didn't keep up with logging or tracking their data regularly, and only a small number of them recorded their sleep or weight measurements. Out of all the participants, only 24 users logged their sleep data, and only 8 users logged their weight data.
 * In the month of recorded activity, participants spent **81%** on average engaging in sedentary activities.  
 * Users failed to wear their devices consistently for the 31 days. **Only 63%** wore their devices daily. 
 * On a weekly basis, **30%** of users were not meeting the CDC recommendations for daily activity. On average, 31 users failed to meet CDC recommendations. That's **94%** of our users. 
