@@ -249,6 +249,22 @@ Out of all the users, 79% didn't meet the goal of 10,000 steps per day. Of these
 #### Total Steps by the Hour
 Next, my goal was to examine the user's total steps by the hour in order to determine the peak hours of activity for our users. Here's my code: 
 ```
+--- Steps by the hour
+SELECT 
+activity_hour,
+SUM(total_steps) AS total_steps_by_hour
+FROM bellabeat.dbo.hourly_steps
+GROUP BY activity_hour
+ORDER BY activity_hour 
+```
+The top 5 hours were: 
+1. 6:00 pm — 542,848 steps
+2. 7:00 pm — 528,552 steps
+3. 12:00 pm — 505,848 steps
+4. 5:00 pm — 498,511 steps
+5. 2:00 pm — 497,813 steps
+	
+We can say that the busiest hours were in the afternoon (from 12:00pm to 2:00pm) and  evening hours (5:00pm to 7:00pm). 
 	
 ## 5. Share
 
