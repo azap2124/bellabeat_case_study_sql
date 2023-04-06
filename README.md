@@ -10,7 +10,7 @@
 * [Analyze & Share](https://github.com/azap2124/bellabeat_case_study/edit/main/README.md#4-analyze--share)
 * [Act](#6-act)
 
-Tools used: 
+**Tools used:**
 * Microsoft Excel
 * SQL Server Management Studio 
 
