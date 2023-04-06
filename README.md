@@ -309,7 +309,7 @@ GROUP BY id
 )subquery
 WHERE sleep_quality = 'No sleep'
 ```
-To my surprise, 13 users on average were not getting enough daily sleep. That's 41% of users. 
+Results are as follows: 13 users on average were not getting enough daily sleep. **That's 41% of users.**
 
 ## 6. Act
 The objective of the business task was to analyze data on the usage of non-Bellabeat products, in order to gain valuable insights into consumer trends in the smart device industry. These insights would then be applied to Bellabeat's customers and future marketing strategies, optimizing revenues and growth for the company while leveraging Bellabeat's growing user base in the smart device and tech-wellness sector. This will involve implementing the findings in the Bellabeat App and upcoming products.
