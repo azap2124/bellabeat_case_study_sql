@@ -63,6 +63,7 @@ Once I had downloaded the Fitbit dataset and performed file extraction, and afte
 * daily_activity.csv
 * hourly_steps.csv
 * hourly_calories.csv
+* daily_calories.csv
 * heart_rate.csv
 * weight_log.csv
 
@@ -255,8 +256,25 @@ The top 5 hours were:
 5. 2:00 pm — 497,813 steps
 	
 We can say that the busiest hours were in the afternoon (from 12:00pm to 2:00pm) and  evening hours (5:00pm to 7:00pm). 
+
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/230245709-5738f3c6-7d7f-4e24-9975-4b336611f14b.png" width="500" height="300"/>  
+	<img src="https://user-images.githubusercontent.com/126125206/230245709-5738f3c6-7d7f-4e24-9975-4b336611f14b.png" width="500" height="300"/>   
+	
+#### Calories Per Day of the Week
+For the daily_calories file I used the TEXT (=TEXT(A1,"dddd")) function in Excel to change dates into days of the week. I then wrote a query in SSMS to determine the average calories burned based on the day of the week to see if it would give me noticeable insights. 
+```
+--- Averaging calories by day of the week 
+SELECT 
+day_of_week,
+AVG(calories) AS total_calories
+FROM bellabeat.dbo.daily_calories
+GROUP BY day_of_week
+ORDER BY day_of_week ASC
+```
+<p align = "center">	
+	<img src="https://user-images.githubusercontent.com/126125206/230256467-d4b85752-f0d0-4920-8d8a-f5d4621bdf36.png" width="500" height="300"/>  
+
+For some reason, Thursdays and Sundays had the lowest calories burnt averages. It could be a result of the type of activities people typically engage in on those days. For example, people might be more likely to engage in sedentary activities like watching TV or spending time with family on Sundays, leading to fewer calories burnt. It could also be because those days are closer to the weekend. 
 	
 ## 5. Share
 
