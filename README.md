@@ -123,9 +123,24 @@ COUNT (id) AS total_logged,
 FROM bellabeat.dbo.daily_activity
 GROUP BY id
 ```
-* Active Users — wore their tracker for 25–31 days
-* Moderate Users — wore their tracker for 15–24 days
-* Light Users — wore their tracker for 0 to 14 days
+```
+---Tracking users that strictly wore their devices for the full 31 days
+SELECT id, 
+total_logged
+FROM
+(
+  SELECT id,
+  COUNT(id) AS total_logged
+  FROM bellabeat.dbo.daily_activity
+  GROUP BY id
+) subquery
+WHERE total_logged = '31'
+```
+* Active Users - wore their trackers for 25–31 days
+* Moderate Users - wore their trackers for 15–24 days
+* Light Users - wore their trackers for 0 to 14 days 
+ 
+(21 users strictly wore their devices for the 31 days)
 
 <p align = "center">
 	<img src="https://user-images.githubusercontent.com/126125206/229374829-6de27082-7ebb-45ee-9ad3-129f153b3ba1.png" width="500" height="300"/>
