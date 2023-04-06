@@ -61,6 +61,7 @@ This dataset includes thirty participants. Thirty Fitbit users willingly provide
 Once I had downloaded the Fitbit dataset and performed file extraction, and after inspecting each file, I proceeded to choose the files that were relevant for my analysis and renamed them using suitable file naming conventions:
 * daily_activity.csv
 * hourly_steps.csv
+* daily_sleep
 * hourly_calories.csv
 * daily_calories.csv
 * heart_rate.csv
@@ -289,15 +290,33 @@ ORDER BY day_of_week ASC
 	<img src="https://user-images.githubusercontent.com/126125206/230256467-d4b85752-f0d0-4920-8d8a-f5d4621bdf36.png" width="500" height="300"/>  
 
 For some reason, Thursdays and Sundays had the lowest calories burnt averages. It could be a result of the type of activities people typically engage in on those days. For example, people might be more likely to engage in sedentary activities like watching TV or spending time with family on Sundays, leading to fewer calories burnt. It could also be because those days are closer to the weekend. 
-
-
+#### Tracking Sleep
+I was interested to see how many users were meeting the 7 - 9 hours of daily sleep. I ran the following query: 
+```
+--- Tracking sleep 
+SELECT id, 
+sleep_quality
+FROM
+(
+SELECT id,
+AVG(total_minutes_asleep/60) AS average_sleep,
+CASE 
+	WHEN AVG(total_minutes_asleep/60) < 7 THEN 'No sleep'
+	WHEN AVG(total_minutes_asleep/60) > 7 THEN 'Enough sleep'
+END sleep_quality
+FROM bellabeat.dbo.daily_sleep
+GROUP BY id
+)subquery
+WHERE sleep_quality = 'No sleep'
+```
+To my surprise, 13 users on average were not getting enough daily sleep. That's 41% of users. 
 
 ## 6. Act
 The objective of the business task was to analyze data on the usage of non-Bellabeat products, in order to gain valuable insights into consumer trends in the smart device industry. These insights would then be applied to Bellabeat's customers and future marketing strategies, optimizing revenues and growth for the company while leveraging Bellabeat's growing user base in the smart device and tech-wellness sector. This will involve implementing the findings in the Bellabeat App and upcoming products.
 
 #### Trends Identified
 * Some of the participants didn't keep up with logging or tracking their data regularly, and only a small number of them recorded their sleep or weight measurements. Out of all the participants, only 24 users logged their sleep data, and only eight users logged their weight data, with just two of them accounting for most of the inputs.
-* In the month of recorded activity, participants spent 79% on average engaging in sedentary activities.  
+* In the month of recorded activity, participants spent **81%** on average engaging in sedentary activities.  
 
 
 
