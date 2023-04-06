@@ -278,6 +278,13 @@ For some reason, Thursdays and Sundays had the lowest calories burnt averages. I
 
 
 ## 6. Act
+The objective of the business task was to analyze data on the usage of non-Bellabeat products, in order to gain valuable insights into consumer trends in the smart device industry. These insights would then be applied to Bellabeat's customers and future marketing strategies, optimizing revenues and growth for the company while leveraging Bellabeat's growing user base in the smart device and tech-wellness sector. This will involve implementing the findings in the Bellabeat App and upcoming products.
+
+#### Trends Identified
+* Some of the participants didn't keep up with logging or tracking their data regularly, and only a small number of them recorded their sleep or weight measurements. Out of all the participants, only 24 users logged their sleep data, and only eight users logged their weight data, with just two of them accounting for most of the inputs.
+* In the month of recorded activity, participants spent 79% of their time engaging in sedentary activities.  
 
 
-  
+
+
+
