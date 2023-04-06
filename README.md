@@ -7,8 +7,7 @@
 * [Ask](#1-ask)
 * [Prepare](#2-prepare) 
 * [Process](#3-process)
-* [Analyze](#4-analyze)
-* [Share](#5-share)
+* [Analyze & Share](https://github.com/azap2124/bellabeat_case_study/edit/main/README.md#4-analyze--share)
 * [Act](#6-act)
 
 Tools used: 
@@ -108,7 +107,7 @@ Users tracking activity:
 - hourly_steps: 33
 - weight_log: 8
 
-## 4. Analyze
+## 4. Analyze & Share
 
 #### User Insights
 I was interested in finding out how often each user utilized their FitBit devices in the daily_activity dataset. To do this, I ran the following code: 
@@ -275,8 +274,7 @@ ORDER BY day_of_week ASC
 	<img src="https://user-images.githubusercontent.com/126125206/230256467-d4b85752-f0d0-4920-8d8a-f5d4621bdf36.png" width="500" height="300"/>  
 
 For some reason, Thursdays and Sundays had the lowest calories burnt averages. It could be a result of the type of activities people typically engage in on those days. For example, people might be more likely to engage in sedentary activities like watching TV or spending time with family on Sundays, leading to fewer calories burnt. It could also be because those days are closer to the weekend. 
-	
-## 5. Share
+
 
 
 ## 6. Act
