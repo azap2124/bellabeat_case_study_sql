@@ -1,4 +1,4 @@
-# <img src="https://user-images.githubusercontent.com/126125206/226458896-65662259-b843-4722-92a4-f15bf8ffbbc6.png" width="200" height="200"/> Case Study: Bellabeat Fitness Data Analysis 
+# <img src="https://user-images.githubusercontent.com/126125206/226458896-65662259-b843-4722-92a4-f15bf8ffbbc6.png" width="150" height="150"/> Case Study: Bellabeat Fitness Data Analysis 
 #### Author: Angel Zapata 
 #### Date: March 20, 2023
 #
