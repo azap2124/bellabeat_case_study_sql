@@ -323,6 +323,15 @@ The objective of the business task was to analyze data on the usage of non-Bella
 * Thursdays and Sundays had the lowest calories burnt on average. 
 * On average, a significant **41%** of users were failing to get the recommended 7 - 9 hours of sleep. 
 
+#### Recommendations 
+**Bellabeat should actively encourage user engagement with their devices to ensure precise tracking of individuals' overall health behaviors.**
+* Bellabeat has the potential to incentivize user engagement by offering rewards or points that can be redeemed for merchandise, discounts on future products, or in-app features. 
+* The implementation of in-app challenges among friends or users in the same city/state could also encourage continuous tracking of health behaviors.
+* Bellabeat could provide additional incentives, such as points, on specific days when people tend to lose interest or motivation in exercising, in order to encourage consistent participation.
+
+
+
+
 
 
 
