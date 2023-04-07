@@ -327,7 +327,17 @@ The objective of the business task was to analyze data on the usage of non-Bella
 **Bellabeat should actively encourage user engagement with their devices to ensure precise tracking of individuals' overall health behaviors.**
 * Bellabeat has the potential to incentivize user engagement by offering rewards or points that can be redeemed for merchandise, discounts on future products, or in-app features. 
 * The implementation of in-app challenges among friends or users in the same city/state could also encourage continuous tracking of health behaviors.
-* Bellabeat could provide additional incentives, such as points, on specific days when people tend to lose interest or motivation in exercising, in order to encourage consistent participation.
+* Bellabeat could provide additional incentives, such as points, on specific days when people tend to lose interest or motivation in exercising, in order to encourage consistent participation. 
+	
+**Given that a lot users stuggled to get more than 7 hours of sleep, Bellabeat should implement features to help their customers get their 7 - 9 hours of sleep time. These could include:**
+* Notifications to alert users when it's time to start getting ready for bed. 
+* Send reminders to users to disable blue light on their phones at least two hours before bedtime.
+	
+**Bellabeat products should include features for calculating BMR (Basal Metabolic Rate) and other health-related measurements.**
+* This allows consumers to input their sex, age, weight, height, and other relevant information to obtain accurate results.
+* These calculations provide users with information on their maintenance calories and the daily caloric deficit needed to achieve their desired weight loss goals, taking into account their weight goals and timeframe.
+* Users could receive notifications when they reach or exceed their daily caloric intake, as well as when they achieve or make progress towards their target weight. 
+* Given that many of our users spend a significant portion of their time engaging in sedentary activities, Bellabeat could consider incorporating articles, videos, and lists of activities that promote transitioning from sedentary to light physical activity. These activities could be performed at home and may include exercises such as squats, push-ups, jumping jacks, and more.
 
 
 
