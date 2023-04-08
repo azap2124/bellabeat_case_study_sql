@@ -329,7 +329,7 @@ The objective of the business task was to analyze data on the usage of non-Bella
 * The implementation of in-app challenges among friends or users in the same city/state could also encourage continuous tracking of health behaviors.
 * Bellabeat could provide additional incentives, such as points, on specific days when people tend to lose interest or motivation in exercising, in order to encourage consistent participation. 
 	
-**Given that a lot users stuggled to get more than 7 hours of sleep, Bellabeat should implement features to help their customers get their 7 - 9 hours of sleep time. These could include:**
+**Given that a lot users struggled to get more than 7 hours of sleep, Bellabeat should implement features to help their customers get their 7 - 9 hours of sleep time. These could include:**
 * Notifications to alert users when it's time to start getting ready for bed. 
 * Send reminders to users to disable blue light on their phones at least two hours before bedtime.
 	
