@@ -270,7 +270,7 @@ The top 5 hours were:
 4. 5:00 pm — 498,511 steps
 5. 2:00 pm — 497,813 steps
 	
-We can say that the busiest hours were in the afternoon (from 12:00pm to 2:00pm) and  evening hours (5:00pm to 7:00pm). 
+The busiest hours were in the afternoon (12:00pm to 2:00pm) and  evening hours (5:00pm to 7:00pm). 
 
 <p align = "center">
 	<img src="https://user-images.githubusercontent.com/126125206/230245709-5738f3c6-7d7f-4e24-9975-4b336611f14b.png" width="500" height="300"/>   
