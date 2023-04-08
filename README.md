@@ -243,7 +243,7 @@ GROUP BY id
 ```
 
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/230232543-4580f7e8-c3ac-40d0-9cc0-756d85bea66c.png" width="500" height="300"/>  
+	<img src="https://user-images.githubusercontent.com/126125206/230736724-7e694b79-7304-4837-a3e1-0abb23126ba2.png" width="500" height="300"/>  
 
 Here are my results: 
 * Passive users: 6
