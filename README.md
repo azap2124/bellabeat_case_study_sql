@@ -137,14 +137,14 @@ FROM
 ) subquery
 WHERE total_logged = '31'
 ```
-* Active Users - wore their trackers for 25–31 days
-* Moderate Users - wore their trackers for 15–24 days
-* Light Users - wore their trackers for 0 to 14 days 
- 
+* **Active users** wore their trackers for 25–31 days
+* **Moderate users** wore their trackers for 15–24 days
+* **Light users** wore their trackers for 0 to 14 days 
+
 **(Only 21 users strictly wore their devices for the 31 days)**
 
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/229374829-6de27082-7ebb-45ee-9ad3-129f153b3ba1.png" width="500" height="300"/>
+	<img src="https://user-images.githubusercontent.com/126125206/230735344-e2e4605c-f414-4632-bf73-4aadb0e54555.png" width="500" height="300"/>
 
 Next, I wrote a query aimed at determining the average duration of user engagement in each level of activity. This was taken from the daily_activity dataset.
 ```
@@ -159,7 +159,7 @@ FROM bellabeat.dbo.daily_activity
 As anticipated, users on average spent the most number of minutes in the Sedentary Activity level. Given that physically demanding jobs are an exception, it was expected that users would spend the majority of their activity in this level.
 	
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/229374954-7c675b4b-9467-4bc1-b335-c23ff55a7ae8.png" width="500" height="300"/>
+	<img src="https://user-images.githubusercontent.com/126125206/230735239-9587a0ef-4ef7-47ec-9dc1-1dab850adfac.png" width="500" height="300"/>
 	
 However, these insights led to another question - which of the users are meeting the minimum activity levels recommended by the [CDC](https://www.cdc.gov/physicalactivity/basics/adults/index.htm#:~:text=Each%20week%20adults%20need%20150,Physical%20Activity%20Guidelines%20for%20Americans.&text=We%20know%20150%20minutes%20of,do%20it%20all%20at%20once)?  
 The Centers for Disease Control and Prevention recommends 150 minutes of moderate-intensity physical activity. At first glance of the data, it seems unlikely that this requirement will be met. I wrote the following query to add Very Active and Fairly Active activities. 
@@ -194,7 +194,7 @@ WHERE very_active_minutes <> 0 AND fairly_active_minutes <> 0
 GROUP BY id
 ```
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/229371423-eb8e668e-5d13-44b2-a703-9f94b38a9542.png" width="500" height="300"/>
+	<img src="https://user-images.githubusercontent.com/126125206/230735147-5c65b976-28c5-4fd5-8a20-b252778ecc68.png" width="500" height="300"/>
 
 The category "Low Activity" pertains to individuals who engaged in fairly active and very active activities for a duration of 0 to 50 minutes.
 On the other hand, "Medium Activity" pertains to individuals who spent 51 to 100 minutes on fairly active and very active activities.
@@ -215,7 +215,7 @@ WHERE activity_date BETWEEN '5/1/2016' AND '5/7/2016'
 GROUP BY id
 ```
 <p align = "center">
-	<img src="https://user-images.githubusercontent.com/126125206/229373615-0c7f81cc-e741-4dbd-803f-2bdf6a018c8b.png" width="500" height="300"/>	
+	<img src="https://user-images.githubusercontent.com/126125206/230736096-0e3bfc21-529a-4273-8de4-dc6236deb57c.png" width="500" height="300"/>	
 
 The results came out as follow: 
 - Users who do not meet the CDC recommendations: 9 
